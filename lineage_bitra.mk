@@ -23,8 +23,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Matrixx internal properties
 TARGET_HAS_UDFPS := true
-TARGET_ENABLE_BLUR := true
-TARGET_EXCLUDES_AUDIOFX := true
+TARGET_ENABLE_BLUR := false
+TARGET_EXCLUDES_AUDIOFX := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_SUPPORTS_QUICK_TAP := true
@@ -32,8 +32,16 @@ TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
+PRODUCT_NO_CAMERA := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+WITH_GMS := false
+TARGET_CORE_GMS := false
+TARGET_CORE_GMS_EXTRAS := false
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
+
 # Enable extra UDFPS animations
-EXTRA_UDFPS_ANIMATIONS := true
+EXTRA_UDFPS_ANIMATIONS := false
 
 # Set Boot Animination Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
